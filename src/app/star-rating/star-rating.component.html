@@ -5,7 +5,7 @@
     (mouseenter)="onMouseEnter(index)"
     (mouseleave)="onMouseLeave()"
     (click)="saveRate(index)"
-    [style.color]="value > index ? setColor(index) : null"
+    [style.color]="value > index ? checkedcolor : uncheckedcolor"
     [style.fontSize]="size"
     [style.width]="size"
     [style.height]="size"

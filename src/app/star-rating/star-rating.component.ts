@@ -21,6 +21,7 @@ export class StarRatingComponent implements OnInit, AfterViewInit {
   @Input() max: number = 1;
   @Input() value: number = 1;
   @Input() uncheckedcolor!: string;
+  @Input() checkedcolor!: string;
   @Input() readonly: boolean = true;
 
   constructor() {}
@@ -46,11 +47,6 @@ export class StarRatingComponent implements OnInit, AfterViewInit {
     this.value = index + 1;
     this.rate = this.value;
   }
-
-  setColor(e: any) {
-    return this.uncheckedcolor;
-  }
-
   trackByFunction(index: number, item: any) {
     if (!item) return null;
     return index;
